@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invitación Digital San Valentín</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ee2b3b",
+            "background-light": "#f8f6f6",
+            "background-dark": "#221012",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .ticket-shape {
+      mask-image: radial-gradient(circle at 0 50%, transparent 15px, black 16px),
+                  radial-gradient(circle at 100% 50%, transparent 15px, black 16px);
+      mask-size: 100% 100%;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#181112] dark:text-white transition-colors duration-300">
+  <div class="relative min-h-screen overflow-x-hidden">
+    <!-- Corazones decorativos de fondo -->
+    <div class="absolute top-10 left-10 text-primary/10 select-none pointer-events-none">
+      <span class="material-symbols-outlined text-[120px]">favorite</span>
+    </div>
+    <div class="absolute bottom-20 right-10 text-primary/10 select-none pointer-events-none rotate-12">
+      <span class="material-symbols-outlined text-[160px]">favorite</span>
+    </div>
+    <div class="absolute top-1/2 right-1/4 text-primary/5 select-none pointer-events-none -rotate-12">
+      <span class="material-symbols-outlined text-[80px]">favorite</span>
+    </div>
+
+    <div class="layout-container flex flex-col items-center max-w-[1200px] mx-auto px-6 py-12 relative z-10">
+      <!-- Cabecera -->
+      <header class="w-full flex justify-between items-center mb-16">
+        <div class="flex items-center gap-2">
+          <div class="p-2 bg-primary rounded-full text-white">
+            <span class="material-symbols-outlined">favorite</span>
+          </div>
+          <span class="font-bold text-xl tracking-tight">Nuestra Historia de Amor</span>
+        </div>
+      </header>
+
+      <!-- Invitación principal -->
+      <section class="text-center mb-16 space-y-4">
+        <p class="text-primary font-bold uppercase tracking-[0.2em] text-sm">Día de San Valentín 2026</p>
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-[#181112] dark:text-white">
+          ¿Quieres ser mi <span class="text-primary">San Valentín?</span>
+        </h1>
+        <p class="text-lg text-[#896165] dark:text-gray-400 max-w-xl mx-auto">
+          Cada momento contigo es un regalo. Hagamos de este San Valentín otro recuerdo bonito para guardar para siempre.
+        </p>
+      </section>
+
+      <!-- Carrusel de fotos -->
+      <section class="w-full mb-24">
+        <div id="carousel" class="flex gap-6 overflow-x-auto pb-8 scroll-smooth no-scrollbar snap-x snap-mandatory px-4">
+          <div class="snap-center shrink-0 w-80 md:w-[400px]">
+            <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl rotate-[-2deg] hover:rotate-0 transition-all duration-500">
+              <div class="aspect-[4/5] w-full rounded-lg overflow-hidden bg-gray-200">
+                <img alt="Donde todo comenzó" class="w-full h-full object-cover" src="fotos/WhatsApp Image 2026-02-05 at 10.14.19 PM.jpeg"/>
+              </div>
+              <p class="mt-4 text-center font-medium italic text-[#896165]">Donde todo comenzó...</p>
+            </div>
+          </div>
+          <div class="snap-center shrink-0 w-80 md:w-[400px]">
+            <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl scale-105 z-10 hover:scale-110 transition-all duration-500">
+              <div class="aspect-[4/5] w-full rounded-lg overflow-hidden bg-gray-200">
+                <img alt="Siempre a tu lado" class="w-full h-full object-cover" src="fotos/WhatsApp Image 2026-02-05 at 10.14.19 PM (1).jpeg"/>
+              </div>
+              <p class="mt-4 text-center font-bold text-primary">Siempre a tu lado</p>
+            </div>
+          </div>
+          <div class="snap-center shrink-0 w-80 md:w-[400px]">
+            <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl rotate-[2deg] hover:rotate-0 transition-all duration-500">
+              <div class="aspect-[4/5] w-full rounded-lg overflow-hidden bg-gray-200">
+                <img alt="Mi risa favorita" class="w-full h-full object-cover" src="fotos/WhatsApp Image 2026-02-05 at 10.17.03 PM.jpeg"/>
+              </div>
+              <p class="mt-4 text-center font-medium italic text-[#896165]">Mi risa favorita</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cupones de amor -->
+      <section class="w-full max-w-5xl">
+        <div class="flex items-center justify-between mb-8 px-4">
+          <h2 class="text-3xl font-bold">Cupones de Amor</h2>
+          <div class="h-px bg-primary/20 flex-1 mx-6"></div>
+          <span class="text-primary material-symbols-outlined text-4xl">loyalty</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-4">
+          <!-- Vale Cena -->
+          <div class="group relative bg-white dark:bg-gray-800 p-1 rounded-xl shadow-lg transition-all hover:-translate-y-2">
+            <div class="ticket-shape border-2 border-dashed border-primary/30 p-6 flex flex-col items-center text-center gap-4 bg-white dark:bg-gray-800 rounded-lg">
+              <div class="size-16 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-3xl">restaurant</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-1">Vale por una Cena</h3>
+                <p class="text-sm text-[#896165] dark:text-gray-400">Canjeable por una cena romántica en el lugar que prefieras.</p>
+              </div>
+              <div class="w-full border-t border-dashed border-gray-200 dark:border-gray-700 my-2"></div>
+              <button type="button" class="btn-redimir w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-full transition-colors flex items-center justify-center gap-2 group-hover:scale-105" data-cupon="Cena">
+                REDIMIR
+                <span class="material-symbols-outlined text-sm">confirmation_number</span>
+              </button>
+              <p class="text-[10px] text-gray-400 uppercase tracking-widest">Sin fecha de vencimiento</p>
+            </div>
+          </div>
+          <!-- Vale Helado -->
+          <div class="group relative bg-white dark:bg-gray-800 p-1 rounded-xl shadow-lg transition-all hover:-translate-y-2">
+            <div class="ticket-shape border-2 border-dashed border-primary/30 p-6 flex flex-col items-center text-center gap-4 bg-white dark:bg-gray-800 rounded-lg">
+              <div class="size-16 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-500">
+                <span class="material-symbols-outlined text-3xl">icecream</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-1">Vale por un Helado</h3>
+                <p class="text-sm text-[#896165] dark:text-gray-400">Canjeable por dos bolas del sabor que más te guste.</p>
+              </div>
+              <div class="w-full border-t border-dashed border-gray-200 dark:border-gray-700 my-2"></div>
+              <button type="button" class="btn-redimir w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-full transition-colors flex items-center justify-center gap-2 group-hover:scale-105" data-cupon="Helado">
+                REDIMIR
+                <span class="material-symbols-outlined text-sm">confirmation_number</span>
+              </button>
+              <p class="text-[10px] text-gray-400 uppercase tracking-widest">Válido en cualquier momento</p>
+            </div>
+          </div>
+          <!-- Vale Cremolada -->
+          <div class="group relative bg-white dark:bg-gray-800 p-1 rounded-xl shadow-lg transition-all hover:-translate-y-2">
+            <div class="ticket-shape border-2 border-dashed border-primary/30 p-6 flex flex-col items-center text-center gap-4 bg-white dark:bg-gray-800 rounded-lg">
+              <div class="size-16 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-500">
+                <span class="material-symbols-outlined text-3xl">local_bar</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-1">Vale por una Cremolada</h3>
+                <p class="text-sm text-[#896165] dark:text-gray-400">Canjeable por un dulce y refrescante helado en vaso.</p>
+              </div>
+              <div class="w-full border-t border-dashed border-gray-200 dark:border-gray-700 my-2"></div>
+              <button type="button" class="btn-redimir w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-full transition-colors flex items-center justify-center gap-2 group-hover:scale-105" data-cupon="Cremolada">
+                REDIMIR
+                <span class="material-symbols-outlined text-sm">confirmation_number</span>
+              </button>
+              <p class="text-[10px] text-gray-400 uppercase tracking-widest">Ideal para días soleados</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pie de página -->
+      <footer class="mt-32 w-full text-center pb-12">
+        <div class="flex flex-col items-center gap-4">
+          <div class="flex items-center gap-4">
+            <div class="h-[1px] w-12 bg-primary/20"></div>
+            <span class="text-primary material-symbols-outlined">favorite</span>
+            <div class="h-[1px] w-12 bg-primary/20"></div>
+          </div>
+          <p class="text-[#896165] dark:text-gray-400 font-medium italic">Con todo mi amor.</p>
+          <div class="flex gap-4 mt-4 flex-wrap justify-center">
+            <button type="button" id="btn-descargar" class="px-6 py-2 border border-primary/20 rounded-full text-sm font-bold text-primary hover:bg-primary hover:text-white transition-all">Descargar invitación</button>
+            <button type="button" id="btn-confirmar" class="px-6 py-2 border border-primary/20 rounded-full text-sm font-bold text-primary hover:bg-primary hover:text-white transition-all">Confirmar asistencia</button>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
