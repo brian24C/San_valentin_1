@@ -33,6 +33,11 @@
     }
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .carta-papel {
+      background: linear-gradient(to bottom, #fdfbfb 0%, #f8f6f6 100%);
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.06), 0 2px 4px -2px rgb(0 0 0 / 0.04), 0 0 0 1px rgb(238 43 59 / 0.08);
+    }
+    .dark .carta-papel { background: linear-gradient(to bottom, #2d1f21 0%, #221012 100%); }
   </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-[#181112] dark:text-white transition-colors duration-300">
@@ -96,6 +101,32 @@
               </div>
               <p class="mt-4 text-center font-medium italic text-[#896165]">Mi risa favorita</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Carta de amor -->
+      <section class="w-full max-w-2xl mb-24 px-4">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl md:text-3xl font-bold flex items-center gap-2">
+            <span class="text-primary material-symbols-outlined text-3xl">mail</span>
+            Carta de amor
+          </h2>
+          <div class="h-px bg-primary/20 flex-1 ml-4"></div>
+        </div>
+        <div class="carta-papel rounded-2xl p-8 md:p-10 relative overflow-hidden border border-primary/10 dark:border-primary/20">
+          <div class="absolute top-4 right-4 text-primary/20">
+            <span class="material-symbols-outlined text-4xl">favorite</span>
+          </div>
+          <p class="text-sm text-primary font-semibold uppercase tracking-widest mb-4">Para ti, mi vida</p>
+          <div class="space-y-4 text-[#181112] dark:text-gray-200 text-lg leading-relaxed">
+            <p class="italic text-[#5c4a4d] dark:text-gray-300">Mi amor, esta es una carta bonita para ti.</p>
+            <p>Quiero decirte que <strong class="text-primary">te amo mucho</strong>, y siempre lo diré. No imagino un mundo sin ti; me encanta estar contigo y no sabes cuánto amo pensar que <strong>nuestro futuro siempre será juntos</strong>.</p>
+            <p>Quiero que recuerdes que siempre habrá discusiones, pero siempre habrá <strong class="text-primary">soluciones para nosotros</strong>.</p>
+            <p class="text-primary font-semibold">Te amo mucho, mi vida.</p>
+          </div>
+          <div class="mt-8 pt-6 border-t border-dashed border-primary/20 flex justify-end">
+            <span class="text-[#896165] dark:text-gray-400 text-sm italic">Con amor, para siempre.</span>
           </div>
         </div>
       </section>
