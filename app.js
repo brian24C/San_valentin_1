@@ -3,6 +3,43 @@
  */
 
 document.addEventListener('DOMContentLoaded', function () {
+  // ¿Quieres ser mi San Valentín? — Sí / No
+  var mensajesNo = [
+    'Yo sé que quieres...',
+    'Seguro que sí quieres, dime que sí 💕',
+    'Vamos, no me hagas sufrir... ¡dime que sí!',
+    '¿En serio no? Intenta otra vez 😏',
+    'Yo sabía que te gustaría. ¡Pulsa Sí!',
+    'No cuentes hasta tres... ¡Sí!',
+    'Mi corazón dice que vas a decir que sí 💖',
+    'Última oportunidad: ¡Sí!',
+    'No te creo. Pulsa Sí y lo celebramos.'
+  ];
+  var indiceNo = 0;
+  var yaDijoSi = false;
+  var escalaSi = 1;
+  var btnSi = document.getElementById('btn-valentin-si');
+  var btnNo = document.getElementById('btn-valentin-no');
+  var mensajeEl = document.getElementById('mensaje-valentin');
+
+  if (btnSi && btnNo && mensajeEl) {
+    btnSi.addEventListener('click', function () {
+      if (yaDijoSi) return;
+      yaDijoSi = true;
+      mensajeEl.textContent = '¡Yo sabía que sí querías! 💕';
+      mensajeEl.classList.add('animate-pulse');
+      btnNo.style.display = 'none';
+    });
+    btnNo.addEventListener('click', function () {
+      if (yaDijoSi) return;
+      mensajeEl.textContent = mensajesNo[indiceNo % mensajesNo.length];
+      indiceNo++;
+      // Cada "No" agranda el botón Sí (máximo 2.5x para que sea gracioso pero no se salga)
+      escalaSi = Math.min(escalaSi + 0.15, 2.5);
+      btnSi.style.transform = 'scale(' + escalaSi + ')';
+    });
+  }
+
   // Botones REDIMIR de cupones
   document.querySelectorAll('.btn-redimir').forEach(function (btn) {
     btn.addEventListener('click', function () {
